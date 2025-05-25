@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
 
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
     <!-- Favicon and touch icons -->
     <link
       rel="apple-touch-icon"
@@ -106,14 +109,14 @@
     <header>
       <div class="nav collapsible">
         <!-- prettier-ignore -->
-        <a aria-label="Hassam Ali" href="/"><img src="images/logo and icon/logo__white.svg" alt="" class="main-logo"></a>
+        <a aria-label="Hassam Ali" href="/"><img src="images/logo and icon/logo__white_path.svg" alt="" class="main-logo"></a>
         <div class="collapsible__header" id="menuToggler">
           <i class="fas fa-bars" id="menuIcon"></i>
         </div>
         <ul class="list collapsible__content">
           <li class="nav__item"><a class="a--underline" href="#">Home</a></li>
           <li class="nav__item">
-            <a class="a--underline" href="#">Porjects</a>
+            <a class="a--underline" href="#">Projects</a>
           </li>
           <li class="nav__item">
             <a class="a--underline" href="#">Curriculum Vitae</a>
@@ -124,6 +127,75 @@
         </ul>
       </div>
     </header>
+    <div class="hero-container">
+      <div class="hero">
+        <div class="hero__left-panel">
+          <div class="hero__left-panel__small-about">
+            <img
+              src="images/Image--main__small.png"
+              alt="Profile Photo"
+              class="hero__left-panel__img"
+            />
+            <h1>Hassam Ali</h1>
+            <p>GIS Engineer | Cartographer</p>
+            <p>Geospatial Developer</p>
+            <p>&</p>
+            <p>Web GIS Applications and Geo-Visualization Enthusiast</p>
+          </div>
+          <div class="hero__left-panel__large-about">
+            <h2>Hi! I'm</h2>
+            <h1>HASSAM ALI</h1>
+            <div id="typed-strings">
+              <p>GIS Developer</p>
+              <p>GIS Engineer</p>
+              <p>Cartographer</p>
+            </div>
+            <h2><span id="typed"></span></h2>
+            <p>&</p>
+            <p>Web GIS Applications and Geo-Visualization Enthusiast</p>
+          </div>
+          <div class="icons-container">
+            <div class="icon-cell">
+              <a
+                href="https://de.linkedin.com/in/hassam-ali-kiani"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="icon icon--linkedin">
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+              </a>
+            </div>
+            <div class="icon-cell">
+              <a
+                href="https://github.com/Ali-Hassam"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="icon icon--git">
+                  <i class="fab fa-github"></i>
+                </div>
+              </a>
+            </div>
+            <div class="icon-cell">
+              <a
+                href="mailto:hassam.ms20@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="icon icon--mail">
+                  <i class="fas fa-envelope"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hero__right-panel">
+          <!-- prettier-ignore -->
+          <img src="images/Image--main-large.png" alt="Profile Photo" class="hero__right-panel__img"/>
+        </div>
+      </div>
+    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

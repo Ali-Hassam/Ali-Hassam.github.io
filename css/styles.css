@@ -44,6 +44,7 @@ html {
   font-size: 62.5%; /* 62.5% of 16px means 10px. So 1rem = 10px*/
 }
 body {
+  background-color: rgba(254, 254, 254, 1);
   color: var(--color-text);
   /* color: var(--color-primary-dark); */
   font-family: Open Sans, Helvetica, Arial, sans-serif;
@@ -1216,9 +1217,13 @@ ul.list li::before {
 }
 
 /* Hero */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  margin: 4rem auto;
+}
 .hero {
   width: 1366px;
-  background-color: rgba(254, 254, 254, 1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1235,8 +1240,7 @@ ul.list li::before {
   display: none;
 }
 .hero__left-panel__img {
-  max-width: 350px;
-
+  max-width: 250px;
   border-radius: 50%;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -1247,7 +1251,17 @@ ul.list li::before {
 .hero__right-panel {
   display: none;
 }
+
+@media screen and (max-width: 768px) {
+  .hero h1,
+  .hero p {
+    margin: 0;
+  }
+}
 @media screen and (min-width: 768px) {
+  .hero-container {
+    margin: 10rem auto;
+  }
   .hero__left-panel__img {
     display: none;
   }
@@ -1258,9 +1272,6 @@ ul.list li::before {
     margin-left: auto;
     display: flex;
   }
-  .hero__right-panel__img {
-    max-height: 60vh;
-  }
   .hero__left-panel__small-about {
     display: none;
   }
@@ -1268,7 +1279,6 @@ ul.list li::before {
     display: block;
   }
 }
-
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero__left-panel h1 {
     font-size: 5rem;
@@ -1284,6 +1294,9 @@ ul.list li::before {
     margin: 0px;
     letter-spacing: 1px;
   }
+  .hero__right-panel__img {
+    width: 410px;
+  }
 }
 @media screen and (min-width: 1024px) {
   .hero__left-panel h1,
@@ -1298,6 +1311,14 @@ ul.list li::before {
     margin: 0px;
     letter-spacing: 1px;
     line-height: 2.2;
+  }
+  .hero__right-panel__img {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero__right-panel__img {
+    width: 545px;
   }
 }
 

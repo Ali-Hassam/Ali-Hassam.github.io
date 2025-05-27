@@ -71,7 +71,6 @@
       sizes="180x180"
       href="images/favicon/apple-icon-180x180.png"
     />
-
     <link
       rel="icon"
       type="image/png"
@@ -107,6 +106,7 @@
   </head>
   <body>
     <header>
+      <!-- Navbar component -->
       <div class="nav collapsible">
         <!-- prettier-ignore -->
         <a aria-label="Hassam Ali" href="/"><img src="images/logo and icon/logo__white_path.svg" alt="" class="main-logo"></a>
@@ -119,7 +119,7 @@
             <a class="a--underline" href="#">Projects</a>
           </li>
           <li class="nav__item">
-            <a class="a--underline" href="#">Curriculum Vitae</a>
+            <a class="a--underline" href="#cv">Curriculum Vitae</a>
           </li>
           <li class="nav__item">
             <a class="a--underline" href="#">Contact</a>
@@ -127,6 +127,7 @@
         </ul>
       </div>
     </header>
+    <!-- hero component  -->
     <div class="hero-container">
       <div class="hero">
         <div class="hero__left-panel">
@@ -137,8 +138,8 @@
               class="hero__left-panel__img"
             />
             <h1>Hassam Ali</h1>
-            <p>GIS Engineer | Cartographer</p>
-            <p>Geospatial Developer</p>
+            <p class="h__l-p__s-a__prof">GIS Engineer | Cartographer</p>
+            <p class="h__l-p__s-a__prof">Geospatial Developer</p>
             <p>&</p>
             <p>Web GIS Applications and Geo-Visualization Enthusiast</p>
           </div>
@@ -194,6 +195,388 @@
           <!-- prettier-ignore -->
           <img src="images/Image--main-large.png" alt="Profile Photo" class="hero__right-panel__img"/>
         </div>
+      </div>
+    </div>
+    <!-- Curriculum Vitae / Media Component -->
+    <div id="cv" class="media-container">
+      <h2 class="section-heading">Curriculum Vitae</h2>
+
+      <div class="collapsible collapsible--expanded">
+        <header class="collapsible__header collapsible__header--CV">
+          <h3 class="collapsible__heading">Education</h3>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <section class="media collapsible__content">
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__icon">
+                <img src="images/nust.svg" alt="NUST logo" />
+              </div>
+              <div class="media__details">
+                <div class="media__dateF">2013 - 2017</div>
+                <div class="media__role">
+                  <h4>Bachelor of Geoinformatics Engineering</h4>
+                </div>
+                <div class="media__org">
+                  National University of Sciences and Technology (NUST), H-12,
+                  Islamabad-Pakistan
+                </div>
+              </div>
+              <h4 class="media__dateS">2013 - 2017</h4>
+            </div>
+            <ul class="list">
+              <!-- prettier-ignore -->
+              <li class="list__item">CGPA = 3.78 / 4 <br/>In the U.S. grading system, higher is better.</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Thesis: Mapping the concentration of Air Pollutants using Geospatial Technologies</li>
+            </ul>
+          </div>
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__icon">
+                <img src="images/tum.svg" alt="TUM logo" />
+              </div>
+              <div class="media__details">
+                <div class="media__dateF">2020 - 2022</div>
+                <div class="media__role">
+                  <!-- prettier-ignore -->
+                  <h4>Erasmus Mundus M.Sc. in Cartography</h4>
+                </div>
+                <!-- prettier-ignore -->
+                <div class="media__org">Technical University of Munich, Munich-Germany
+              </div>
+              </div>
+              <h4 class="media__dateS">2020 - 2022</h4>
+            </div>
+            <ul class="list">
+              <!-- prettier-ignore -->
+              <li class="list__item">CGPA = 1.7 / 5 <br/> In the German grading system, lower is better</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Thesis: Pattern-driven Analysis of Pedestrian Movement</li>
+            </ul>
+          </div>
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__icon">
+                <img
+                  src="images/Logo_Universität_Münster.svg"
+                  alt="University of Münster logo"
+                />
+              </div>
+              <div class="media__details">
+                <div class="media__dateF">2024 - Present</div>
+                <div class="media__role">
+                  <h4>M.Sc. Geoinformatics and Spatial Data Science</h4>
+                </div>
+                <!-- prettier-ignore -->
+                <div class="media__org">University of Münster, Münster-Germany
+              </div>
+              </div>
+              <h4 class="media__dateS">2024 - Present</h4>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="collapsible">
+        <header class="collapsible__header collapsible__header--CV">
+          <h3 class="collapsible__heading">Experience</h3>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <section class="media collapsible__content">
+          <!-- New Experience -->
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__icon">
+                <img src="images/vodafone.svg" alt="Vodafone logo" />
+              </div>
+              <div class="media__details">
+                <div class="media__dateF">Aug 2021 - Oct 2021</div>
+                <div class="media__role">
+                  <h4>GeoAnalyst</h4>
+                </div>
+                <div class="media__org">Vodafone GmbH, Düsseldorf-Germany</div>
+              </div>
+              <h4 class="media__dateS">Aug 2021 - Oct 2021</h4>
+            </div>
+            <ul class="list">
+              <!-- prettier-ignore -->
+              <li class="list__item">Conducted geospatial analysis to identify optimal 5G network sites across Germany</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Developed a Python-based pipeline to automate data processing and dynamically generate results, significantly improving efficiency and decision-making</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Automated service publishing and related tasks using ArcGIS API for Python, enabling a smooth transition to a new enterprise server</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Developed Python scripts to automate routine workflows and tasks, increasing team efficiency and reducing manual effort</li>
+            </ul>
+          </div>
+          <!-- New Experience -->
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__icon">
+                <img
+                  src="images/State_emblem_of_Pakistan.svg"
+                  alt="State emblem of Pakistan.svg"
+                />
+              </div>
+              <div class="media__details">
+                <div class="media__dateF">Oct 2017 - Sep 2020</div>
+                <div class="media__role">
+                  <h4>GIS Officer</h4>
+                </div>
+                <div class="media__org">
+                  Government of Pakistan, Rawalpindi Pakistan
+                </div>
+              </div>
+              <h4 class="media__dateS">Oct 2017 - Sep 2020</h4>
+            </div>
+            <ul class="list">
+              <!-- prettier-ignore -->
+              <li class="list__item">Designed and produced maps and geodata visualizations for reports and web applications</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Developed Python scripts to automate geospatial workflows and routine tasks</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Created, managed, and validated geospatial datasets, ensuring high data quality and consistency</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Maintained and enhanced a Python-based spatial decision support system to assist in data-driven planning</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Supported the development of geospatial web applications and contributed to database design and management</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Processed and analyzed satellite imagery for remote sensing applications, including land use & land cover mapping and change detection</li>
+            </ul>
+          </div>
+          <!-- New Experience -->
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__icon">
+                <img src="images/lmkt.svg" alt="Logo of LMKT.svg" />
+              </div>
+              <div class="media__details">
+                <div class="media__dateF">Aug 2016 - Sep 2016</div>
+                <div class="media__role">
+                  <h4>GIS Intern</h4>
+                </div>
+                <div class="media__org">LMKT - Islamabad, Pakistan</div>
+              </div>
+              <h4 class="media__dateS">Aug 2016 - Sep 2016</h4>
+            </div>
+            <ul class="list">
+              <!-- prettier-ignore -->
+              <li class="list__item">Built a custom Python add-in for ArcGIS to calculate bearing and distance between two points</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Created spatial datasets and performed satellite image classification for a web-based GIS application in smart agriculture</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Modeled multiple routes using ArcGIS Model Builder to support geospatial analysis</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Processed, verified, and mapped electricity distribution networks for a power utility company</li>
+            </ul>
+          </div>
+          <!-- New Experience -->
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__icon">
+                <img src="images/ndma.svg" alt="Logo of NDMA.svg" />
+              </div>
+              <div class="media__details">
+                <div class="media__dateF">Jun 2016 - Aug 2016</div>
+                <div class="media__role">
+                  <h4>GIS and IT Intern</h4>
+                </div>
+                <div class="media__org">
+                  National Disaster Management Authority - Islamabad, Pakistan
+                </div>
+              </div>
+              <h4 class="media__dateS">Jun 2016 - Aug 2016</h4>
+            </div>
+            <ul class="list">
+              <!-- prettier-ignore -->
+              <li class="list__item">Developed a complaint management system using OpenLayers, PHP, and GeoServer to visualize and manage spatial incidents</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Processed and classified satellite imagery (Landsat 8, Sentinel-2A) for flood extent mapping and damage assessment</li>
+            </ul>
+          </div>
+          <!-- New Experience -->
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__icon">
+                <img src="images/dhai.svg" alt="Logo of DHAI.svg" />
+              </div>
+              <div class="media__details">
+                <div class="media__dateF">Aug 2015 - Sep 2015</div>
+                <div class="media__role">
+                  <h4>GIS Intern</h4>
+                </div>
+                <div class="media__org">
+                  Defence Housing Authority - Islamabad, Pakistan
+                </div>
+              </div>
+              <h4 class="media__dateS">Aug 2015 - Sep 2015</h4>
+            </div>
+            <ul class="list">
+              <!-- prettier-ignore -->
+              <li class="list__item">Converted sector plans from AutoCAD (DXF) to GIS-compatible data-formats</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Conducted data quality assurance checks to ensure spatial accuracy and attribute consistency</li>
+              <!-- prettier-ignore -->
+              <li class="list__item">Supported GIS mapping initiatives through data preparation and validation</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- Skills -->
+      <div class="collapsible">
+        <header class="collapsible__header collapsible__header--CV">
+          <h3 class="collapsible__heading">Skills</h3>
+
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <section class="media collapsible__content">
+          <div class="media__skills">
+            <span class="badge badge--large"
+              >Data Management and Quality Assurance
+            </span>
+            <span class="badge badge--large"
+              >Geodata Analysis / Spatial Analysis</span
+            >
+            <span class="badge badge--large"
+              >Cartography and Geovisualization</span
+            >
+            <span class="badge badge--large">Satellite Image Analysis</span>
+            <span class="badge badge--large"
+              >Digital Mapping and Image Processing</span
+            >
+          </div>
+          <hr />
+          <div class="media__skills">
+            <span class="badge badge--large"
+              >Workflows and Task Automation</span
+            >
+            <span class="badge badge--large">WebGIS</span>
+            <span class="badge badge--large">Map Services & APIs</span>
+            <span class="badge badge--large"
+              >Database Management Systems (DBMS)</span
+            >
+          </div>
+        </section>
+      </div>
+      <!-- Tecnologies -->
+      <div class="collapsible">
+        <header class="collapsible__header collapsible__header--CV">
+          <h3 class="collapsible__heading">Technologies</h3>
+
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <section class="media collapsible__content">
+          <div class="media__skills">
+            <span class="badge badge--large badge--primary"
+              >ArcGIS / ArcGIS Pro</span
+            >
+            <span class="badge badge--large badge--primary">QGIS</span>
+            <span class="badge badge--large badge--primary">ERDAS IMAGINE</span>
+            <span class="badge badge--large badge--primary">PostGIS / SQL</span>
+            <span class="badge badge--large badge--primary">GeoServer</span>
+            <span class="badge badge--large badge--primary">Python</span>
+            <span class="badge badge--large badge--primary">JavaScript</span>
+            <span class="badge badge--large badge--primary">HTML & CSS</span>
+            <span class="badge badge--large badge--primary"
+              >Git and Docker</span
+            >
+          </div>
+        </section>
+      </div>
+      <!-- Awards -->
+      <div class="collapsible">
+        <header class="collapsible__header collapsible__header--CV">
+          <h3 class="collapsible__heading">Awards</h3>
+
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <section class="media collapsible__content">
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__details">
+                <div class="media__role">
+                  <h4>President's Gold Medal</h4>
+                </div>
+                <div class="media__org">
+                  For best academic performance in "Bachelor of Geoinformatics
+                  Engineering" session 2013-2017
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__details">
+                <div class="media__role">
+                  <h4>Erasmus Mundus Scholarship</h4>
+                </div>
+                <div class="media__org">
+                  For "Erasmus Mundus M.Sc. Cartography Program" 2020 intake.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="media__component-wrapper">
+            <div class="media__component">
+              <div class="media__details">
+                <div class="media__role">
+                  <h4>Merit-based Scholarship</h4>
+                </div>
+                <div class="media__org">
+                  In all semesters of bachelor’s degree
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- Languages -->
+      <div class="collapsible">
+        <header class="collapsible__header collapsible__header--CV">
+          <h3 class="collapsible__heading">Languages</h3>
+
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <section class="media collapsible__content">
+          <ul class="list">
+            <!-- prettier-ignore -->
+            <li class="list__item"><strong>English:</strong>&nbsp C1</li>
+            <!-- prettier-ignore -->
+            <li class="list__item"><strong>German:</strong>&nbsp A2</li>
+          </ul>
+        </section>
       </div>
     </div>
     <script src="js/main.js"></script>

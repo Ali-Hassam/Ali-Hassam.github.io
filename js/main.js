@@ -1,15 +1,40 @@
-// for collapsible and navbar
-allElements = document.querySelectorAll(".collapsible__header");
-allElements.forEach((element) => {
+document.querySelectorAll(".collapsible__header").forEach((element) =>
   element.addEventListener("click", function () {
-    allElements.forEach((element) => {
-      element === this
-        ? element.parentElement.classList.toggle("collapsible--expanded")
-        : element.parentElement.classList.remove("collapsible--expanded");
-    });
-  });
-});
-// Typed JS
+    this.parentElement.classList.toggle("collapsible--expanded");
+  })
+);
+
+// // for collapsible and navbar
+// allElements = document.querySelectorAll(".collapsible__header");
+// allElements.forEach((element) => {
+//   element.addEventListener("click", function () {
+//     allElements.forEach((element) => {
+//       element === this
+//         ? element.parentElement.classList.toggle("collapsible--expanded")
+//         : element.parentElement.classList.remove("collapsible--expanded");
+//     });
+//   });
+// });
+
+// //Expand-one-collpase-other (final logic)
+// allElements = document.querySelectorAll(".collapsible__header");
+// allElements.forEach((element) => {
+//   element.addEventListener("click", function () {
+//     allElements.forEach((element) => {
+//       element === this
+//         ? element.parentElement.classList.toggle("collapsible--expanded")
+//         : element.parentElement.classList.remove("collapsible--expanded");
+//     });
+//   });
+// });
+
+// //for header expand-and-collapse
+// document.querySelectorAll(".collapsible__header--CV").forEach((element) =>
+//   element.addEventListener("click", function () {
+//     this.parentElement.classList.toggle("collapsible--expanded");
+//   })
+// );
+
 var typed = new Typed("#typed", {
   stringsElement: "#typed-strings",
   typeSpeed: 100,
@@ -17,11 +42,12 @@ var typed = new Typed("#typed", {
   backDelay: 1000,
   loop: true,
 });
-document.querySelectorAll(".collapsible__header__CV").forEach((element) =>
-  element.addEventListener("click", function () {
-    this.parentElement.classList.toggle("collapsible--expanded");
-  })
-);
+
+// document.querySelectorAll(".collapsible__header__CV").forEach((element) =>
+//   element.addEventListener("click", function () {
+//     this.parentElement.classList.toggle("collapsible--expanded");
+//   })
+// );
 const menuToggle = document.getElementById("menuToggler");
 const menuIcon = document.getElementById("menuIcon");
 
@@ -83,25 +109,6 @@ filterButtons.forEach((button) => {
 searchInput.addEventListener("input", filterProjects);
 searchBtn.addEventListener("click", filterProjects);
 
-//Expand-one-collpase-other (final logic)
-allElements = document.querySelectorAll(".collapsible__header");
-allElements.forEach((element) => {
-  element.addEventListener("click", function () {
-    allElements.forEach((element) => {
-      element === this
-        ? element.parentElement.classList.toggle("collapsible--expanded")
-        : element.parentElement.classList.remove("collapsible--expanded");
-    });
-  });
-});
-
-//for header expand-and-collapse
-document.querySelectorAll(".collapsible__header__CV").forEach((element) =>
-  element.addEventListener("click", function () {
-    this.parentElement.classList.toggle("collapsible--expanded");
-  })
-);
-
 // Contact - Map
 var map = L.map("map").setView([51.9694182, 7.5956726], 10);
 
@@ -118,13 +125,10 @@ marker.bindPopup("<b><h2>GEO 1</b></h2><br> <h3>Universität Münster</h3>");
 
 //Contact - contact form
 const form = document.getElementById("contact-form");
-// const thankYouMessage = document.getElementById("thank-you-message");
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent the default form submission
-
+  e.preventDefault(); // Prevent the default form submission and page reload
   const formData = new FormData(form);
-  // const data = new URLSearchParams(formData);
 
   fetch(
     "https://script.google.com/macros/s/AKfycbwhn-DoEkixJuwJ4VHU1_CgZymyaBxkYh3nkdcuE5GyH1pEuVaayyqkYWCJYPhqzAHd/exec",

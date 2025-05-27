@@ -42,7 +42,7 @@
 /* Typography / Fonts */
 html {
   font-size: 62.5%; /* 62.5% of 16px means 10px. So 1rem = 10px*/
-  scroll-padding-top: 5rem; /* Zoom to the Section-title on navbar link press */
+  scroll-padding-top: 7rem; /* Zoom to the Section-title on navbar link press */
 }
 body {
   background-color: rgba(254, 254, 254, 1);
@@ -136,7 +136,7 @@ p {
 }
 hr {
   width: 50%;
-  height: 2px;
+  height: 1px;
   border: none;
   background-color: var(--color-primary);
   margin: 20px auto;
@@ -666,7 +666,7 @@ ul.list li::before {
     margin-top: 5rem;
   }
   .collapsible__header--CV .fa-stack {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 768px) {

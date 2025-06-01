@@ -1,40 +1,10 @@
+//for all the collapsible components
 document.querySelectorAll(".collapsible__header").forEach((element) =>
   element.addEventListener("click", function () {
     this.parentElement.classList.toggle("collapsible--expanded");
   })
 );
-
-// // for collapsible and navbar
-// allElements = document.querySelectorAll(".collapsible__header");
-// allElements.forEach((element) => {
-//   element.addEventListener("click", function () {
-//     allElements.forEach((element) => {
-//       element === this
-//         ? element.parentElement.classList.toggle("collapsible--expanded")
-//         : element.parentElement.classList.remove("collapsible--expanded");
-//     });
-//   });
-// });
-
-// //Expand-one-collpase-other (final logic)
-// allElements = document.querySelectorAll(".collapsible__header");
-// allElements.forEach((element) => {
-//   element.addEventListener("click", function () {
-//     allElements.forEach((element) => {
-//       element === this
-//         ? element.parentElement.classList.toggle("collapsible--expanded")
-//         : element.parentElement.classList.remove("collapsible--expanded");
-//     });
-//   });
-// });
-
-// //for header expand-and-collapse
-// document.querySelectorAll(".collapsible__header--CV").forEach((element) =>
-//   element.addEventListener("click", function () {
-//     this.parentElement.classList.toggle("collapsible--expanded");
-//   })
-// );
-
+//Typed Js for hero component
 var typed = new Typed("#typed", {
   stringsElement: "#typed-strings",
   typeSpeed: 100,
@@ -43,19 +13,78 @@ var typed = new Typed("#typed", {
   loop: true,
 });
 
-// document.querySelectorAll(".collapsible__header__CV").forEach((element) =>
-//   element.addEventListener("click", function () {
-//     this.parentElement.classList.toggle("collapsible--expanded");
-//   })
-// );
+//menu toggler for smaller screens
 const menuToggle = document.getElementById("menuToggler");
 const menuIcon = document.getElementById("menuIcon");
 
 menuToggle.addEventListener("click", () => {
   menuIcon.classList.toggle("fa-bars");
-  menuIcon.classList.toggle("fa-times"); // or use "fa-xmark" if you're on FA 6
+  menuIcon.classList.toggle("fa-times"); // or use "fa-xmark" if you're on FA 6. I am using v5
 });
 
+// Contact - Map
+var map = L.map("map").setView([51.9694182, 7.5956726], 10);
+
+L.tileLayer(
+  "http://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_grau/default/WEBMERCATOR/{z}/{y}/{x}.png",
+  {
+    maxZoom: 18,
+    attribution:
+      'Map data: &copy; <a href="http://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>',
+  }
+).addTo(map);
+var marker = L.marker([51.9694182, 7.5956726]).addTo(map);
+marker.bindPopup("<b><h2>GEO 1</b></h2><br> <h3>Universität Münster</h3>");
+
+//Contact - contact form
+const form = document.getElementById("contact-form");
+const overlay = document.getElementById("contact-overlay");
+const messageBanner = document.getElementById("contact-message");
+
+form.addEventListener("submit", function (e) {
+  // Prevent the default form submission and page reload
+  e.preventDefault();
+
+  // Show the thank you message
+  overlay.classList.remove("hidden");
+  // hide the thank you message after 5 seconds if the server takes long
+  setTimeout(() => {
+    overlay.classList.add("hidden");
+  }, 5000);
+
+  //get the form-data to submit
+  const formData = new FormData(form);
+  fetch(
+    "https://script.google.com/macros/s/AKfycbwhn-DoEkixJuwJ4VHU1_CgZymyaBxkYh3nkdcuE5GyH1pEuVaayyqkYWCJYPhqzAHd/exec",
+    {
+      method: "POST",
+      body: formData,
+    }
+  )
+    .then((response) => response.text())
+    .then(() => {
+      //hide the thank you message
+      overlay.classList.add("hidden");
+      // Reset the form
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("Submission failed:", error);
+      // Replace inner HTML of the message banner to show an error otherwise
+      messageBanner.innerHTML = `
+    <i class="fas fa-exclamation-triangle" style="font-size: 100px; color: #f44336; margin-bottom: 10px;"></i>
+    <h2 style="color: #f44336;">Error</h2>
+    <h3 style="color: #f44336;">Something went wrong.</h3>
+    <h4 style="color: #f44336;">Please try again later.</h4>
+  `;
+      // hide after a 5 seconds
+      setTimeout(() => {
+        overlay.classList.add("hidden");
+      }, 5000);
+    });
+});
+
+// Projects Components
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 const filterButtons = document.querySelectorAll("[data-filter]");
@@ -108,45 +137,3 @@ filterButtons.forEach((button) => {
 // Search bar and button click event
 searchInput.addEventListener("input", filterProjects);
 searchBtn.addEventListener("click", filterProjects);
-
-// Contact - Map
-var map = L.map("map").setView([51.9694182, 7.5956726], 10);
-
-L.tileLayer(
-  "http://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_grau/default/WEBMERCATOR/{z}/{y}/{x}.png",
-  {
-    maxZoom: 18,
-    attribution:
-      'Map data: &copy; <a href="http://www.govdata.de/dl-de/by-2-0">dl-de/by-2-0</a>',
-  }
-).addTo(map);
-var marker = L.marker([51.9694182, 7.5956726]).addTo(map);
-marker.bindPopup("<b><h2>GEO 1</b></h2><br> <h3>Universität Münster</h3>");
-
-//Contact - contact form
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent the default form submission and page reload
-  const formData = new FormData(form);
-
-  fetch(
-    "https://script.google.com/macros/s/AKfycbwhn-DoEkixJuwJ4VHU1_CgZymyaBxkYh3nkdcuE5GyH1pEuVaayyqkYWCJYPhqzAHd/exec",
-    {
-      method: "POST",
-      body: formData,
-    }
-  )
-    .then((response) => response.text())
-    .then((responseText) => {
-      // Show the thank you alert
-      alert(
-        "Thank you for your message.\nI will reach out to you as soon as possible"
-      );
-      // Reset the form
-      form.reset();
-    })
-    .catch((error) => {
-      console.error("Submission failed:", error);
-    });
-});

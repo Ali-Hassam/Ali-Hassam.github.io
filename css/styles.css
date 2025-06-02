@@ -158,6 +158,7 @@ hr {
   text-align: center;
   margin: 10rem auto 3rem auto;
 }
+
 /* Links and Anchors */
 a {
   color: var(--color-text);
@@ -562,6 +563,16 @@ ul.list li::before {
 
 /* Media Object */
 .media-container {
+  background: linear-gradient(
+    0deg,
+    #fefefe 0%,
+    rgba(191, 211, 222, 0.3) 25%,
+    rgba(191, 211, 222, 0.5) 50%,
+    rgba(191, 211, 222, 0.3) 75%,
+    #fefefe 100%
+  );
+}
+.media-container .collapsible {
   margin: 0 auto;
   max-width: 1080px;
 }
@@ -1122,6 +1133,7 @@ ul.list li::before {
 
 /* Footer*/
 .footer {
+  margin-top: 10rem;
   padding-top: 4rem;
 }
 .footer * {
@@ -1132,12 +1144,13 @@ ul.list li::before {
 }
 .footer--dark * {
   color: white;
+  opacity: 0.95;
 }
 .footer .collapsible:nth-of-type(3) {
   border-bottom: none;
 }
 .footer .collapsible__content a {
-  position: relative; /*for the pseudo element below*/
+  position: relative; /*for the pseudo element (line below) */
 }
 .footer .collapsible__content a::after {
   content: "";
@@ -1194,10 +1207,8 @@ ul.list li::before {
     flex: 0.1 1 auto;
   }
   .footer .collapsible {
-    /* flex: 1 1 auto; */
     border-bottom: 0;
-    /* padding: 10rem 2rem; */
-    padding: 5rem 0;
+    padding: 2rem 0;
   }
   .footer .collapsible__content {
     opacity: 1;
@@ -1207,7 +1218,6 @@ ul.list li::before {
     order: -1;
     padding: 0;
     margin: 0;
-    /* margin: auto 5rem; */
   }
   .footer .collapsible__toggler {
     display: none;
@@ -1216,7 +1226,6 @@ ul.list li::before {
     font-size: 1.5rem;
   }
   .footer .list {
-    /* margin: 1.6rem 0; */
     margin: 1.6rem 0 0 0;
   }
   .footer li {
@@ -1470,6 +1479,15 @@ ul.list li::before {
   .contact__2__form textarea {
     height: 30vh;
   }
+}
+
+.content-notice {
+  color: rgb(137, 140, 144);
+  font-size: 0.9rem;
+  background-color: rgb(1, 42, 57);
+  text-align: center;
+  padding: 2rem;
+  margin-bottom: 0;
 }
 
 /* Extra Classes */

@@ -138,7 +138,8 @@
         </ul>
       </div>
     </header>
-    <!-- hero component  -->
+
+    <!-- Hero component  -->
     <div class="hero-container">
       <div class="hero">
         <div class="hero__left-panel">
@@ -210,12 +211,11 @@
     </div>
 
     <!-- Curriculum Vitae / Media Component -->
-    <div id="cv" class="media-container">
-      <h2 class="section-heading">Curriculum Vitae</h2>
-
-      <div class="collapsible collapsible--expanded">
+    <h2 id="cv" class="section-heading">Curriculum Vitae</h2>
+    <div class="media-container">
+      <div id="education" class="collapsible collapsible--expanded">
         <header class="collapsible__header collapsible__header--CV">
-          <h3 class="collapsible__heading">Education</h3>
+          <h3 id="education" class="collapsible__heading">Education</h3>
           <div class="collapsible__icon collapsible__toggler">
             <span class="fa-stack fa-2x">
               <i class="fas fa-circle fa-stack-2x"></i>
@@ -294,7 +294,7 @@
           </div>
         </section>
       </div>
-      <div class="collapsible">
+      <div id="experience" class="collapsible">
         <header class="collapsible__header collapsible__header--CV">
           <h3 class="collapsible__heading">Experience</h3>
           <div class="collapsible__icon collapsible__toggler">
@@ -445,7 +445,7 @@
         </section>
       </div>
       <!-- Skills -->
-      <div class="collapsible">
+      <div id="skills" class="collapsible">
         <header class="collapsible__header collapsible__header--CV">
           <h3 class="collapsible__heading">Skills</h3>
 
@@ -486,7 +486,7 @@
         </section>
       </div>
       <!-- Tecnologies -->
-      <div class="collapsible">
+      <div id="technologies" class="collapsible">
         <header class="collapsible__header collapsible__header--CV">
           <h3 class="collapsible__heading">Technologies</h3>
 
@@ -516,7 +516,7 @@
         </section>
       </div>
       <!-- Awards -->
-      <div class="collapsible">
+      <div id="awards" class="collapsible">
         <header class="collapsible__header collapsible__header--CV">
           <h3 class="collapsible__heading">Awards</h3>
 
@@ -712,6 +712,98 @@
         </div>
       </div>
     </div>
+
+    <!-- Footer -->
+    <div id="footer" class="footer footer--dark">
+      <section class="collapsible collapsible--expanded">
+        <header class="collapsible__header">
+          <p class="collapsible__heading">CONTENTS</p>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#cv">Resume</a></li>
+            <li><a href="#contact">Message</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="collapsible">
+        <header class="collapsible__header">
+          <p class="collapsible__heading">RESUME</p>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li><a id="foo__education" href="#education">Education</a></li>
+            <li><a id="foo__experience" href="#experience">Experience</a></li>
+            <li><a id="foo__skills" href="#skills">Skills</a></li>
+            <li><a id="foo__awards" href="#awards">Honors</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="collapsible">
+        <header class="collapsible__header">
+          <p class="collapsible__heading">CONTACT</p>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li>
+              <a
+                href="https://de.linkedin.com/in/hassam-ali-kiani"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Ali-Hassam"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer__logo">
+        <a href="#">
+          <img src="images/logo and icon/Icon--hollow.svg" alt="Icon"
+        /></a>
+        <p class="footer__copyright-notice">Copyright &copy; 2025 Hassam Ali</p>
+      </section>
+    </div>
+
+    <!-- Content notice -->
+    <p class="content-notice">
+      All the content on this website and associated pages is the exclusive
+      property of Hassam Ali and is protected by international copyright laws.
+      Any reproduction, redistribution, scraping, training of AI models
+      (including but not limited to machine learning and large language models),
+      or any other form of automated or manual data extraction is strictly
+      prohibited without prior consent. Unauthorized use may result in legal
+      action.
+    </p>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -4,6 +4,13 @@ document.querySelectorAll(".collapsible__header").forEach((element) =>
     this.parentElement.classList.toggle("collapsible--expanded");
   })
 );
+const footer__experience = document.getElementById("footer__experience");
+const footer__skills = document.getElementById("footer__skills");
+const footer_awards = document.getElementById("footer_awards");
+const experience = document.getElementById("experience");
+const skills = document.getElementById("skills");
+const awards = document.getElementById("awards");
+
 //Typed Js for hero component
 var typed = new Typed("#typed", {
   stringsElement: "#typed-strings",
@@ -12,7 +19,9 @@ var typed = new Typed("#typed", {
   backDelay: 1000,
   loop: true,
 });
-
+function abc() {
+  alert(this.innerHTML);
+}
 //menu toggler for smaller screens
 const menuToggle = document.getElementById("menuToggler");
 const menuIcon = document.getElementById("menuIcon");
@@ -82,6 +91,26 @@ form.addEventListener("submit", function (e) {
         overlay.classList.add("hidden");
       }, 5000);
     });
+});
+
+// Footer links
+// Select all anchors with IDs that start with "foo__"
+const anchors = document.querySelectorAll('a[id^="foo__"]');
+
+anchors.forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault(); // Prevent default anchor behavior
+
+    const fullId = anchor.id;
+    const targetId = fullId.replace(/^foo__/, ""); // Remove "foo" prefix
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.classList.add("collapsible--expanded");
+    }
+    // Scroll to the element smoothly
+    targetElement.scrollIntoView({ behavior: "smooth" });
+  });
 });
 
 // Projects Components

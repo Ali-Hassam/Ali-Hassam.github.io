@@ -1441,7 +1441,7 @@ ul.list li::before {
   backdrop-filter: blur(3px);
   background-color: rgba(218, 214, 214, 0.3); /* blur fallback for Firefox*/
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   z-index: 1000;
 }
@@ -1449,7 +1449,7 @@ ul.list li::before {
   background: white;
   border-radius: 12px;
   width: 80%;
-  height: 60%;
+  height: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1478,6 +1478,12 @@ ul.list li::before {
   }
   .contact__2__form textarea {
     height: 30vh;
+  }
+  .contact-overlay {
+    align-items: center;
+  }
+  .contact-message {
+    height: 60%;
   }
 }
 

@@ -35,7 +35,7 @@ menuToggle.addEventListener("click", () => {
 var map = L.map("map").setView([51.9694182, 7.5956726], 10);
 
 L.tileLayer(
-  "http://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_grau/default/WEBMERCATOR/{z}/{y}/{x}.png",
+  "https://sgx.geodatenzentrum.de/wmts_topplus_open/tile/1.0.0/web_grau/default/WEBMERCATOR/{z}/{y}/{x}.png",
   {
     maxZoom: 18,
     attribution:
@@ -72,7 +72,7 @@ form.addEventListener("submit", function (e) {
   )
     .then((response) => response.text())
     .then(() => {
-      //hide the thank you message
+      //hide the thank you message after promise resolve
       overlay.classList.add("hidden");
       // Reset the form
       form.reset();
@@ -86,7 +86,7 @@ form.addEventListener("submit", function (e) {
     <h3 style="color: #f44336;">Something went wrong.</h3>
     <h4 style="color: #f44336;">Please try again later.</h4>
   `;
-      // hide after a 5 seconds
+      // hide errror message after a 5 seconds
       setTimeout(() => {
         overlay.classList.add("hidden");
       }, 5000);
@@ -116,6 +116,8 @@ anchors.forEach((anchor) => {
 // Projects Components
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
+// anything that starts with data- ...
+// See in project articles above the class
 const filterButtons = document.querySelectorAll("[data-filter]");
 const projects = document.querySelectorAll(".project");
 const message = document.querySelector(".portfolio__warning");
@@ -132,15 +134,18 @@ function filterProjects() {
     const name = project.dataset.name?.toLowerCase() || "";
     const type = project.dataset.type?.toLowerCase() || "";
     const tech = project.dataset.tech?.toLowerCase() || "";
-
+    //Empty string in Js means "False" and "!False" === "True".
+    // Thus matchesSearch is "True" for this project if searchbar is empty.
     const matchesSearch =
-      !searchTerm || // match all if search bar is empty
+      !searchTerm ||
       name.includes(searchTerm) ||
       type.includes(searchTerm) ||
       tech.includes(searchTerm);
-
+    // matchesFilter is true if currentFilter is set to 'all'
+    // OR if the project-type matches currentFilter applied via buttons in UI
     const matchesFilter = currentFilter === "all" || type === currentFilter;
-
+    // If words in the searchbar matches name/type/tech of the project or
+    // currentFilter applied via a button matches project type, show the project
     if (matchesSearch && matchesFilter) {
       project.style.display = "flex";
       anyVisible = true;
@@ -148,21 +153,87 @@ function filterProjects() {
       project.style.display = "none";
     }
   });
-
+  // Nothing to show message
   message.style.display = anyVisible ? "none" : "flex";
 }
 // Filter button click event
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
+    //change the value of current filter
     currentFilter = button.dataset.filter.toLowerCase();
 
-    // Optional: update active class if you want styling
+    // Optional: update active class for styling
     filterButtons.forEach((btn) => btn.classList.remove("btn--active"));
     button.classList.add("btn--active");
 
     filterProjects();
   });
 });
-// Search bar and button click event
-searchInput.addEventListener("input", filterProjects);
-searchBtn.addEventListener("click", filterProjects);
+// // Search bar and button click event
+// searchInput.addEventListener("input", filterProjects);
+// searchBtn.addEventListener("click", filterProjects);
+// 1. Initially, do not attach input listener
+let inputListenerActivated = false;
+// Handle Search button click
+searchBtn.addEventListener("click", () => {
+  filterProjects();
+  inputListenerActivated = true;
+});
+// Handle input typing — will run only if the search button has been clicked
+searchInput.addEventListener("input", () => {
+  if (inputListenerActivated) {
+    filterProjects();
+  }
+});
+
+//To open the images onClick
+function openImage(event, src) {
+  event.preventDefault();
+
+  // Create overlay
+  const overlay = document.createElement("div");
+  overlay.style.position = "fixed";
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.width = "100vw";
+  overlay.style.height = "100vh";
+  overlay.style.background = "rgba(0, 0, 0, 0.8)";
+  overlay.style.display = "flex";
+  overlay.style.alignItems = "center";
+  overlay.style.justifyContent = "center";
+  overlay.style.cursor = "zoom-out";
+  overlay.style.zIndex = 9999;
+
+  // Create image
+  const img = document.createElement("img");
+  img.src = src;
+  img.style.cursor = "zoom-in";
+  img.style.maxWidth = "100%";
+  img.style.maxHeight = "100%";
+  img.style.transition = "transform 0.3s ease";
+
+  // Toggle zoom on click
+  let zoomed = false;
+  img.onclick = function (e) {
+    //prevent the click propation / bubble up to overlay
+    //otherwise the overlay onClick fucntion could also trigger
+    e.stopPropagation();
+    if (!zoomed) {
+      img.style.transform = "scale(" + img.naturalWidth / img.clientWidth + ")";
+      img.style.cursor = "zoom-out";
+      zoomed = true;
+    } else {
+      img.style.transform = "scale(1)";
+      img.style.cursor = "zoom-in";
+      zoomed = false;
+    }
+  };
+
+  // Remove on overlay click
+  overlay.onclick = function () {
+    document.body.removeChild(overlay);
+  };
+
+  overlay.appendChild(img);
+  document.body.appendChild(overlay);
+}

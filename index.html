@@ -18,9 +18,6 @@
     <!-- fontawesome icons -->
     <!-- prettier-ignore -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
-    <!-- Style sheets -->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
     <!-- leaflet -->
     <link
       rel="stylesheet"
@@ -28,6 +25,11 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- leaflet -->
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
@@ -127,7 +129,7 @@
         <ul class="list collapsible__content">
           <li class="nav__item"><a class="a--underline" href="#">Home</a></li>
           <li class="nav__item">
-            <a class="a--underline" href="#">Projects</a>
+            <a class="a--underline" href="#portfolio">Portfolio</a>
           </li>
           <li class="nav__item">
             <a class="a--underline" href="#cv">Curriculum Vitae</a>
@@ -144,11 +146,16 @@
       <div class="hero">
         <div class="hero__left-panel">
           <div class="hero__left-panel__small-about">
-            <img
-              src="images/Image--main__small.png"
-              alt="Profile Photo"
-              class="hero__left-panel__img"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset="images/Image--main__small.webp"
+              />
+              <!-- prettier-ignore -->
+              <img src="images/Image--main__small.png" alt="Profile Photo" class="hero__left-panel__img"/>
+            </picture>
+            <!-- prettier-ignore -->
+            <!-- <img src="images/Image--main__small.png" alt="Profile Photo" class="hero__left-panel__img" > -->
             <h1>Hassam Ali</h1>
             <p class="h__l-p__s-a__prof">GIS Engineer | Cartographer</p>
             <p class="h__l-p__s-a__prof">Geospatial Developer</p>
@@ -204,10 +211,371 @@
           </div>
         </div>
         <div class="hero__right-panel">
+          <picture>
+            <source type="image/webp" srcset="images/Image--main-large.webp" />
+            <!-- prettier-ignore -->
+            <img src="images/Image--main-large.png" alt="Profile Photo" class="hero__right-panel__img"/>
+          </picture>
           <!-- prettier-ignore -->
-          <img src="images/Image--main-large.png" alt="Profile Photo" class="hero__right-panel__img"/>
+          <!-- <img src="images/Image--main-large.png" alt="Profile Photo" class="hero__right-panel__img"/> -->
         </div>
       </div>
+    </div>
+
+    <!-- portfolio component -->
+    <!-- portfolio block -->
+    <section id="portfolio" class="block">
+      <div class="block__header">
+        <h2 class="block__header__heading">Protfolio</h2>
+        <p>
+          Browse through some of my projects showcasing my skills and technical
+          abilities.
+        </p>
+        <div class="input-group">
+          <input
+            id="searchInput"
+            type="text"
+            class="inputs"
+            autocomplete="off"
+            placeholder="Search a project . . ."
+          />
+          <button id="searchBtn" class="btn btn--primary">
+            <i class="fas fa-search"></i>Search
+          </button>
+        </div>
+      </div>
+      <div class="block__body">
+        <div id="filterButtons" class="block__btns">
+          <button
+            data-filter="all"
+            class="btn btn--small btn--outline btn--active"
+          >
+            All
+          </button>
+          <button data-filter="webMap" class="btn btn--small btn--outline">
+            Web Maps
+          </button>
+          <button data-filter="webApp" class="btn btn--small btn--outline">
+            Web Apps
+          </button>
+          <button data-filter="desktopApp" class="btn btn--small btn--outline">
+            Desktop Apps
+          </button>
+          <button data-filter="poster" class="btn btn--small btn--outline">
+            Posters
+          </button>
+          <button data-filter="paperMap" class="btn btn--small btn--outline">
+            Paper Maps
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Not found message -->
+    <div class="portfolio__warning">
+      <i class="fas fa-exclamation-triangle"></i>
+      <h4>No projects match your search</h4>
+      <p>
+        Try refining your query by adjusting the keywords in the search bar or
+        selecting a different project type from the available options.
+      </p>
+    </div>
+    <!-- Portfolio projects -->
+    <div class="projects">
+      <article
+        data-name="The Unemployed States of America"
+        data-type="webMap"
+        data-tech="HTML CSS JS JavaScript Leaflet"
+        class="project"
+      >
+        <div class="project__header">
+          <span class="badge badge--large badge--primary">Web Map</span>
+          <h2 class="project__title">The Unemployed States of America</h2>
+          <div class="project_techs">
+            <span class="badge badge--html">HTML</span>
+            <span class="badge badge--css">CSS</span>
+            <span class="badge badge--Js">JavsScript</span>
+            <span class="badge badge--leaflet">Leaflet</span>
+          </div>
+        </div>
+
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              images/image1x.webp 1x,
+              images/image2x.webp 2x,
+              images/image3x.webp 3x
+            "
+          />
+          <img src="images/image2x.png" alt="" class="project__image" />
+        </picture>
+
+        <div class="project__body">
+          In March 2020, state governments all over the US began implementing
+          state-wide lockdowns of various length in respond to the arrival of
+          COVID-19. Government ordered lockdowns resulted in record level of
+          unemployment. This map illustrate the impacts of lockdowns on
+          unemployment levels in the US during the first three quarters of 2020.
+
+          <div class="project__links">
+            <a href="#" class="link a--underline">Learn More</a>
+            <a href="#" class="link a--underline">Live Demo</a>
+            <!-- <a href="#" class="link a--underline">Git Repo</a> -->
+          </div>
+        </div>
+      </article>
+
+      <article
+        data-name="GATE"
+        data-type="webApp"
+        data-tech="HTML CSS JS JavaScript Leaflet"
+        class="project"
+      >
+        <div class="project__header">
+          <span class="badge badge--large badge--primary">Web App</span>
+          <h2 class="project__title">
+            Geospatial Application for Transportation & E-commerce
+          </h2>
+          <div class="project_techs">
+            <span class="badge badge--html">HTML</span>
+            <span class="badge badge--css">CSS</span>
+            <span class="badge badge--Js">JavsScript</span>
+            <span class="badge badge--leaflet">Leaflet</span>
+          </div>
+        </div>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              images/image1x.webp 1x,
+              images/image2x.webp 2x,
+              images/image3x.webp 3x
+            "
+          />
+          <img src="images/image2x.png" alt="" class="project__image" />
+        </picture>
+        <div class="project__body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quae quo
+          voluptatem quibusdam. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. A, dolore.
+          <div class="project__links">
+            <a href="#" class="link a--underline">Learn More</a>
+            <a href="#" class="link a--underline">Live Demo</a>
+            <a href="#" class="link a--underline">Git Repo</a>
+          </div>
+        </div>
+      </article>
+
+      <article
+        data-name="Enforcing Downhill Steady Gradient on the Polyline Data"
+        data-type="desktopApp"
+        data-tech="Python GDAL PyShp"
+        class="project"
+      >
+        <div class="project__header">
+          <span class="badge badge--large badge--primary">QGIS Plugin</span>
+          <h2 class="project__title">
+            Enforcing Downhill Steady Gradient on the Polyline Data
+          </h2>
+          <div class="project_techs">
+            <span class="badge badge--python">Python</span>
+            <span class="badge badge--python">GDAL</span>
+            <span class="badge badge--python">PyShp</span>
+          </div>
+        </div>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              images/image1x.webp 1x,
+              images/image2x.webp 2x,
+              images/image3x.webp 3x
+            "
+          />
+          <img src="images/image2x.png" alt="" class="project__image" />
+        </picture>
+        <div class="project__body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quae quo
+          voluptatem quibusdam. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. A, dolore.
+          <div class="project__links">
+            <a href="#" class="link a--underline">Learn More</a>
+            <a href="#" class="link a--underline">Live Demo</a>
+            <a href="#" class="link a--underline">Git Repo</a>
+          </div>
+        </div>
+      </article>
+
+      <article
+        data-name="Langugage Learning Application"
+        data-type="desktopApp"
+        data-tech="Python SpaCy PySpellChecker"
+        class="project"
+      >
+        <div class="project__header">
+          <span class="badge badge--large badge--primary">Desktop App</span>
+          <h2 class="project__title">Langugage Learning Application</h2>
+          <div class="project_techs">
+            <span class="badge badge--python">Python</span>
+            <span class="badge badge--python">SpaCy</span>
+            <span class="badge badge--python">PySpellChecker</span>
+          </div>
+        </div>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              images/image1x.webp 1x,
+              images/image2x.webp 2x,
+              images/image3x.webp 3x
+            "
+          />
+          <img src="images/image2x.png" alt="" class="project__image" />
+        </picture>
+        <div class="project__body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quae quo
+          voluptatem quibusdam. Lorem ipsum dolor sit, amet consectetur
+          adipisicing elit. A, dolore.
+          <div class="project__links">
+            <a href="#" class="link a--underline">Learn More</a>
+            <a href="#" class="link a--underline">Live Demo</a>
+            <a href="#" class="link a--underline">Git Repo</a>
+          </div>
+        </div>
+      </article>
+
+      <article
+        data-name="Kamran on Bike"
+        data-type="paperMap"
+        data-tech="ArcGIS Pro Inkscape"
+        class="project"
+      >
+        <div class="project__header">
+          <span class="badge badge--large badge--primary">Paper Map</span>
+          <h2 class="project__title">Kamran on Bike</h2>
+          <div class="project_techs">
+            <span class="badge badge--arcgispro">ArcGIS Pro</span>
+            <span class="badge badge--inkscape">Inkscape</span>
+          </div>
+        </div>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="
+              images/projects/2/kamranonbike-1x.webp 1x,
+              images/projects/2/kamranonbike-2x.webp 2x,
+              images/projects/2/kamranonbike-3x.webp 3x
+            "
+          />
+          <img
+            src="images/projects/2/kamranonbike-2x.png"
+            alt="kamran on bike project image"
+            class="project__image"
+          />
+        </picture>
+        <div class="project__body">
+          This map visualizes the extraordinary cycling expedition of Kamran
+          Ali, known as Kamran on Bike, who pedaled over 33,000 kilometers from
+          Ushuaia, Argentina—the southernmost city in the world—to Prudhoe Bay,
+          Alaska. Spanning the length of the Americas, this route showcases not
+          only physical endurance but a deep spirit of exploration and cultural
+          storytelling.
+          <div class="project__links">
+            <a
+              href="https://cartographymaster.eu/studentwork/kamran-on-bike/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link a--underline"
+              >Learn More</a
+            >
+            <a
+              href="https://cartographymaster.eu/wp-content/uploads/2021/07/Ali_5000px.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link a--underline"
+              >View Map</a
+            >
+            <a
+              href="https://cartographymaster.eu/studentwork/kamran-on-bike/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link a--underline"
+              >Project Page</a
+            >
+          </div>
+        </div>
+      </article>
+
+      <article
+        data-name="Gwadar A Poster of Gwadar's Bathymetry"
+        data-type="poster"
+        data-tech="Inkscape"
+        class="project"
+      >
+        <div class="project__header">
+          <span class="badge badge--large badge--primary">Poster</span>
+          <h2 class="project__title">GWADAR</h2>
+          <div class="project_techs">
+            <span class="badge badge--inkscape">Inkscape</span>
+          </div>
+        </div>
+        <picture
+          onclick="openImage(event, 'images/projects/3/Gwadar.png')"
+          style="cursor: zoom-in"
+        >
+          <source
+            type="image/webp"
+            srcset="
+              images/projects/3/gwadar-1x.webp 1x,
+              images/projects/3/gwadar-2x.webp 2x,
+              images/projects/3/gwadar-3x.webp 3x
+            "
+          />
+          <img
+            src="images/projects/3/gwadar-2x.png"
+            alt=""
+            class="project__image"
+          />
+        </picture>
+        <div class="project__body">
+          This poster showcases the captivating bathymetry of Gwadar, Pakistan —
+          a coastal region where land and sea blend into dramatic forms. Viewed
+          from above, the contours reveal the hidden depth and beauty beneath
+          the waves, offering a unique perspective of this strategic maritime
+          location.
+          <div class="project__links">
+            <a
+              href="https://cartographymaster.eu/wp-content/uploads/2021/07/Ali_5000px.jpg"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link a--underline"
+              >Learn More</a
+            >
+            <a
+              href="images/projects/3/Gwadar.png"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="openImage(event, 'images/projects/3/Gwadar.png')"
+              class="link a--underline"
+              >View Poster</a
+            >
+            <!-- <a
+              href="images/projects/3/Gwadar.svg"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link a--underline"
+              >View Original</a
+            > -->
+            <a
+              href="#"
+              onclick="openImage(event, 'images/projects/3/Gwadar.svg')"
+              class="link a--underline"
+            >
+              View Original
+            </a>
+          </div>
+        </div>
+      </article>
     </div>
 
     <!-- Curriculum Vitae / Media Component -->
@@ -681,6 +1049,7 @@
             type="text"
             name="name"
             placeholder="Your Name"
+            autocomplete="given-name"
             class="inputs--plain"
             required
           />
@@ -689,6 +1058,7 @@
             type="email"
             name="email"
             placeholder="Your Email"
+            autocomplete="user_email"
             class="inputs--plain"
             required
           />

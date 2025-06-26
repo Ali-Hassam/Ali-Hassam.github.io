@@ -28,15 +28,8 @@
     <!-- Style sheets -->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/styles.css" />
-
-    <!-- leaflet -->
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
-    <!-- Typed JS -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- AOS animation Js library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <!-- Favicon and touch icons -->
     <link
@@ -224,7 +217,12 @@
 
     <!-- portfolio component -->
     <!-- portfolio block -->
-    <section id="portfolio" class="block">
+    <section
+      id="portfolio"
+      class="block"
+      data-aos="zoom-in-down"
+      data-aos-duration="500"
+    >
       <div class="block__header">
         <h2 class="block__header__heading">Protfolio</h2>
         <p>
@@ -267,6 +265,9 @@
           <button data-filter="paperMap" class="btn btn--small btn--outline">
             Paper Maps
           </button>
+          <button data-filter="svgMap" class="btn btn--small btn--outline">
+            SVG Maps
+          </button>
         </div>
       </div>
     </section>
@@ -286,6 +287,8 @@
         data-type="webMap"
         data-tech="HTML CSS JS JavaScript Leaflet"
         class="project"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
       >
         <div class="project__header">
           <span class="badge badge--large badge--primary">Web Map</span>
@@ -330,6 +333,8 @@
         data-type="webApp"
         data-tech="HTML CSS JS JavaScript Leaflet"
         class="project"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
       >
         <div class="project__header">
           <span class="badge badge--large badge--primary">Web App</span>
@@ -371,6 +376,8 @@
         data-type="desktopApp"
         data-tech="Python GDAL PyShp"
         class="project"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
       >
         <div class="project__header">
           <span class="badge badge--large badge--primary">QGIS Plugin</span>
@@ -411,6 +418,8 @@
         data-type="desktopApp"
         data-tech="Python SpaCy PySpellChecker"
         class="project"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
       >
         <div class="project__header">
           <span class="badge badge--large badge--primary">Desktop App</span>
@@ -449,6 +458,8 @@
         data-type="paperMap"
         data-tech="ArcGIS Pro Inkscape"
         class="project"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
       >
         <div class="project__header">
           <span class="badge badge--large badge--primary">Paper Map</span>
@@ -458,7 +469,9 @@
             <span class="badge badge--inkscape">Inkscape</span>
           </div>
         </div>
-        <picture>
+        <picture
+          onclick="openImage(event, 'images/projects/2/kamranonbike-2x.webp')"
+        >
           <source
             type="image/webp"
             srcset="
@@ -511,6 +524,8 @@
         data-type="poster"
         data-tech="Inkscape"
         class="project"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
       >
         <div class="project__header">
           <span class="badge badge--large badge--primary">Poster</span>
@@ -519,10 +534,7 @@
             <span class="badge badge--inkscape">Inkscape</span>
           </div>
         </div>
-        <picture
-          onclick="openImage(event, 'images/projects/3/Gwadar.png')"
-          style="cursor: zoom-in"
-        >
+        <picture onclick="openImage(event, 'images/projects/3/gwadar-2x.webp')">
           <source
             type="image/webp"
             srcset="
@@ -545,7 +557,7 @@
           location.
           <div class="project__links">
             <a
-              href="https://cartographymaster.eu/wp-content/uploads/2021/07/Ali_5000px.jpg"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
               class="link a--underline"
@@ -555,33 +567,38 @@
               href="images/projects/3/Gwadar.png"
               target="_blank"
               rel="noopener noreferrer"
-              onclick="openImage(event, 'images/projects/3/Gwadar.png')"
               class="link a--underline"
               >View Poster</a
             >
-            <!-- <a
+            <a
               href="images/projects/3/Gwadar.svg"
+              //href="image-viewer.html?src=images/projects/3/Gwadar.svg"
               target="_blank"
               rel="noopener noreferrer"
               class="link a--underline"
               >View Original</a
-            > -->
-            <a
-              href="#"
-              onclick="openImage(event, 'images/projects/3/Gwadar.svg')"
-              class="link a--underline"
             >
-              View Original
-            </a>
           </div>
         </div>
       </article>
     </div>
 
     <!-- Curriculum Vitae / Media Component -->
-    <h2 id="cv" class="section-heading">Curriculum Vitae</h2>
+    <h2
+      id="cv"
+      class="section-heading"
+      data-aos="zoom-in-down"
+      data-aos-duration="500"
+    >
+      Curriculum Vitae
+    </h2>
     <div class="media-container">
-      <div id="education" class="collapsible collapsible--expanded">
+      <div
+        id="education"
+        class="collapsible collapsible--expanded"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
+      >
         <header class="collapsible__header collapsible__header--CV">
           <h3 id="education" class="collapsible__heading">Education</h3>
           <div class="collapsible__icon collapsible__toggler">
@@ -662,7 +679,12 @@
           </div>
         </section>
       </div>
-      <div id="experience" class="collapsible">
+      <div
+        id="experience"
+        class="collapsible"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
+      >
         <header class="collapsible__header collapsible__header--CV">
           <h3 class="collapsible__heading">Experience</h3>
           <div class="collapsible__icon collapsible__toggler">
@@ -813,7 +835,12 @@
         </section>
       </div>
       <!-- Skills -->
-      <div id="skills" class="collapsible">
+      <div
+        id="skills"
+        class="collapsible"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
+      >
         <header class="collapsible__header collapsible__header--CV">
           <h3 class="collapsible__heading">Skills</h3>
 
@@ -854,7 +881,12 @@
         </section>
       </div>
       <!-- Tecnologies -->
-      <div id="technologies" class="collapsible">
+      <div
+        id="technologies"
+        class="collapsible"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
+      >
         <header class="collapsible__header collapsible__header--CV">
           <h3 class="collapsible__heading">Technologies</h3>
 
@@ -884,7 +916,12 @@
         </section>
       </div>
       <!-- Awards -->
-      <div id="awards" class="collapsible">
+      <div
+        id="awards"
+        class="collapsible"
+        data-aos="zoom-in-down"
+        data-aos-duration="500"
+      >
         <header class="collapsible__header collapsible__header--CV">
           <h3 class="collapsible__heading">Awards</h3>
 
@@ -938,7 +975,7 @@
         </section>
       </div>
       <!-- Languages -->
-      <div class="collapsible">
+      <div class="collapsible" data-aos="zoom-in-down" data-aos-duration="500">
         <header class="collapsible__header collapsible__header--CV">
           <h3 class="collapsible__heading">Languages</h3>
 
@@ -961,9 +998,16 @@
     </div>
 
     <!-- Contact Me Component -->
-    <h2 id="contact" class="section-heading">Contact</h2>
+    <h2
+      id="contact"
+      class="section-heading"
+      data-aos="zoom-in-down"
+      data-aos-duration="500"
+    >
+      Contact
+    </h2>
     <div class="contact">
-      <div class="contact__1">
+      <div class="contact__1" data-aos="zoom-in-down" data-aos-duration="500">
         <h3>Get in Touch</h3>
         <div class="email">
           <div class="icon-cell">
@@ -1036,7 +1080,7 @@
         </div>
         <div id="map" class="contact__map"></div>
       </div>
-      <div class="contact__2">
+      <div class="contact__2" data-aos="zoom-in-down" data-aos-duration="500">
         <h3>Drop a Line</h3>
         <form
           id="contact-form"
@@ -1158,9 +1202,11 @@
       </section>
       <section class="footer__logo">
         <a href="#">
-          <img src="images/logo and icon/Icon--hollow.svg" alt="Icon"
-        /></a>
-        <p class="footer__copyright-notice">Copyright &copy; 2025 Hassam Ali</p>
+          <img src="images/logo and icon/Icon--hollow.svg" alt="Icon" />
+        </a>
+        <p class="footer__copyright-notice">
+          <span id="copyright-text"></span>
+        </p>
       </section>
     </div>
 
@@ -1174,6 +1220,18 @@
       prohibited without prior consent. Unauthorized use may result in legal
       action.
     </p>
+    <!-- leaflet -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>

@@ -155,12 +155,21 @@ function filterProjects() {
   });
   // Nothing to show message
   message.style.display = anyVisible ? "none" : "flex";
+  //refresh the animations on scroll instance
+  AOS.refresh();
 }
+
+// 1. Initially, do not attach input listener
+let inputListenerActivated = false;
+
 // Filter button click event
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
     //change the value of current filter
     currentFilter = button.dataset.filter.toLowerCase();
+
+    //Activate the input field and add an input listener
+    inputListenerActivated = true;
 
     // Optional: update active class for styling
     filterButtons.forEach((btn) => btn.classList.remove("btn--active"));
@@ -172,8 +181,7 @@ filterButtons.forEach((button) => {
 // // Search bar and button click event
 // searchInput.addEventListener("input", filterProjects);
 // searchBtn.addEventListener("click", filterProjects);
-// 1. Initially, do not attach input listener
-let inputListenerActivated = false;
+
 // Handle Search button click
 searchBtn.addEventListener("click", () => {
   filterProjects();
@@ -207,27 +215,10 @@ function openImage(event, src) {
   // Create image
   const img = document.createElement("img");
   img.src = src;
-  img.style.cursor = "zoom-in";
+  img.style.cursor = "zoom-out";
   img.style.maxWidth = "100%";
   img.style.maxHeight = "100%";
   img.style.transition = "transform 0.3s ease";
-
-  // Toggle zoom on click
-  let zoomed = false;
-  img.onclick = function (e) {
-    //prevent the click propation / bubble up to overlay
-    //otherwise the overlay onClick fucntion could also trigger
-    e.stopPropagation();
-    if (!zoomed) {
-      img.style.transform = "scale(" + img.naturalWidth / img.clientWidth + ")";
-      img.style.cursor = "zoom-out";
-      zoomed = true;
-    } else {
-      img.style.transform = "scale(1)";
-      img.style.cursor = "zoom-in";
-      zoomed = false;
-    }
-  };
 
   // Remove on overlay click
   overlay.onclick = function () {
@@ -236,4 +227,13 @@ function openImage(event, src) {
 
   overlay.appendChild(img);
   document.body.appendChild(overlay);
+}
+
+//Copyright
+const copyrightOwner = "Hassam Ali";
+const currentYear = new Date().getFullYear();
+
+const el = document.getElementById("copyright-text");
+if (el) {
+  el.textContent = `Copyright © ${currentYear} ${copyrightOwner}`;
 }

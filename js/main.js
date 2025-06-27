@@ -235,3 +235,46 @@ const el = document.getElementById("copyright-text");
 if (el) {
   el.textContent = `Copyright © ${currentYear} ${copyrightOwner}`;
 }
+
+// back-to-top
+const backToTopBtn = document.querySelector("#back-to-top");
+const footer = document.querySelector("#footer");
+
+function updateButtonPosition() {
+  const footerRect = footer.getBoundingClientRect(); //position and size of the footer relative to the viewport.
+  const windowHeight = window.innerHeight; //height of the visible browser window (the viewport), in pixels
+  //footerRect.top gives the distance from the top of the viewport to the top of the footer (in pixels).
+  //if footer is visible (is in the viewport)
+  if (footerRect.top < windowHeight) {
+    //calculate overlap (the amount the footer is in the vieport)
+    const overlap = windowHeight - footerRect.top;
+    //pushe the button up by the amount of the overlap, plus a bit of spacing (+20px).
+    backToTopBtn.style.bottom = `${overlap + 20}px`;
+  } else {
+    // Footer is not visible, normal position
+    backToTopBtn.style.bottom = "20px";
+  }
+}
+
+// Show/hide button & update position on scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 3000) {
+    backToTopBtn.style.display = "flex";
+    updateButtonPosition();
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+// Also update position on resize (footer height may change)
+window.addEventListener("resize", () => {
+  if (backToTopBtn.style.display === "flex") {
+    updateButtonPosition();
+  }
+});
+
+// Scroll to top on click
+backToTopBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});

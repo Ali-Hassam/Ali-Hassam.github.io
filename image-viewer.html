@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Viewer</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        width: auto;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="displayed-image" src="" alt="Image" />
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const src = params.get("src");
+      if (src) {
+        const imageElement = document.getElementById("displayed-image");
+        imageElement.src = src;
+
+        imageElement.addEventListener("click", () => {
+          window.open(src, "_blank"); // Open in a new window
+        });
+      }
+    </script>
+  </body>
+</html>

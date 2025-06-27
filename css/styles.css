@@ -1109,8 +1109,8 @@ ul.list li::before {
   font-weight: 300;
   align-items: flex-start;
   padding: 4rem;
-  font-size: clamp(1.1rem, 1vw + 1rem, 2rem);
-  line-height: 1.5;
+  font-size: clamp(1.1rem, 1vw + 1rem, 1.8rem);
+  /* line-height: 1.5; */
 }
 .project--page__header {
   display: flex;
@@ -1133,15 +1133,20 @@ ul.list li::before {
   align-items: center;
   width: 100%;
   height: 100%;
-  /* margin-bottom: 5rem; */
+  margin-bottom: 5rem;
 }
 .project--page__main-image-container img {
   max-width: 100%; /* Prevents the image from overflowing */
   height: auto; /* Maintains the image aspect ratio */
 }
+.project--page h4 {
+  font-size: clamp(2rem, calc(1.657rem + 1.0714vw), 3.2rem);
+  font-weight: 380;
+  margin-bottom: 1rem;
+}
 .project--page p {
   text-align: justify;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 .project--page__summary {
   font-size: clamp(1.1rem, 1vw + 1rem, 1.6rem);
@@ -1155,12 +1160,46 @@ ul.list li::before {
   text-align: left;
   margin-bottom: 1.6rem;
 }
+
+.project--page ul.list li {
+  position: relative;
+  padding-left: 1.5rem;
+  text-indent: -2rem;
+  max-width: 70ch;
+  margin-bottom: 1rem;
+}
+.project--page ul.list li::before {
+  content: "\2043";
+  margin-right: 0.5em;
+}
+.project--page__img-right,
+.project--page__img-left {
+  width: 100%;
+}
+.project--page__img-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 2rem;
+}
+.project--page__img-small > picture {
+  display: inline-block;
+}
 @media screen and (min-width: 768px) {
   .project--page__main-image-container {
     margin-bottom: 5rem;
   }
+  .project--page__img-right {
+    margin: 2rem 0 2rem 2rem;
+    max-width: 500px;
+    float: right;
+  }
+  .project--page__img-left {
+    max-width: 500px;
+    margin: 2rem 2rem 2rem 0;
+    float: left;
+  }
 }
-
 @media screen and (min-width: 1366px) {
   .project--page__summary {
     max-width: 70ch;
@@ -1177,27 +1216,6 @@ ul.list li::before {
     line-height: 1.8;
     margin-left: 2rem;
   }
-}
-.project--page ul.list li {
-  position: relative;
-  padding-left: 1.5rem;
-  text-indent: -2rem;
-  max-width: 70ch;
-  margin-bottom: 1rem;
-}
-.project--page ul.list li::before {
-  content: "\2043";
-  margin-right: 0.5em;
-}
-.project--page__img-right {
-  margin-left: 2rem;
-  max-width: 500px;
-  float: right;
-}
-.project--page__img-left {
-  max-width: 500px;
-  margin-right: 2rem;
-  float: left;
 }
 
 /* Footer*/

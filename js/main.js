@@ -11,17 +11,6 @@ const experience = document.getElementById("experience");
 const skills = document.getElementById("skills");
 const awards = document.getElementById("awards");
 
-//Typed Js for hero component
-var typed = new Typed("#typed", {
-  stringsElement: "#typed-strings",
-  typeSpeed: 100,
-  backSpeed: 50,
-  backDelay: 1000,
-  loop: true,
-});
-function abc() {
-  alert(this.innerHTML);
-}
 //menu toggler for smaller screens
 const menuToggle = document.getElementById("menuToggler");
 const menuIcon = document.getElementById("menuIcon");
@@ -29,6 +18,15 @@ const menuIcon = document.getElementById("menuIcon");
 menuToggle.addEventListener("click", () => {
   menuIcon.classList.toggle("fa-bars");
   menuIcon.classList.toggle("fa-times"); // or use "fa-xmark" if you're on FA 6. I am using v5
+});
+
+//Typed Js for hero component
+var typed = new Typed("#typed", {
+  stringsElement: "#typed-strings",
+  typeSpeed: 100,
+  backSpeed: 50,
+  backDelay: 1000,
+  loop: true,
 });
 
 // Contact - Map

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Hassam Ali - GIS Engineer | GIS Developer | Cartographer | Web GIS
+      Enthusiast
+    </title>
+
+    <!-- Fonts link for Google font service -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- prettier-ignore -->
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" />
+
+    <!-- fontawesome icons -->
+    <!-- prettier-ignore -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+    <!-- leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- leaflet -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Favicon and touch icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="images/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="images/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="images/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="images/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="images/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="images/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+
+    <link rel="manifest" href="images/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="images/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar component -->
+      <div class="nav collapsible">
+        <!-- prettier-ignore -->
+        <a aria-label="Hassam Ali" href="/"><img src="images/logo and icon/logo__white_path.svg" alt="" class="main-logo"></a>
+        <div class="collapsible__header" id="menuToggler">
+          <i class="fas fa-bars" id="menuIcon"></i>
+        </div>
+        <ul class="list collapsible__content">
+          <li class="nav__item"><a class="a--underline" href="/">Home</a></li>
+          <li class="nav__item">
+            <a class="a--underline" href="index.html#portfolio">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a class="a--underline" href="index.html#cv">Curriculum Vitae</a>
+          </li>
+          <li class="nav__item">
+            <a class="a--underline" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="project--page">
+      <div class="project--page__header">
+        <h2 class="project__title">Bathymetry of Gwadar, Pakistan</h2>
+        <div class="project_techs">
+          <span class="badge badge--inkscape">Inkscape</span>
+        </div>
+      </div>
+      <picture
+        class="project--page__main-image-container"
+        onclick="openImage(event, 'images/projects/3/gwadar-2x.webp')"
+      >
+        <source
+          type="image/webp"
+          srcset="
+            images/projects/3/gwadar-1x.webp 1x,
+            images/projects/3/gwadar-2x.webp 2x,
+            images/projects/3/gwadar-3x.webp 3x
+          "
+        />
+        <img
+          src="images/projects/3/gwadar-2x.png"
+          alt=""
+          class="project__image"
+        />
+      </picture>
+      <div class="project--page__body">
+        <div class="project--page__summary">
+          <p>
+            When viewed from above—such as through satellite imagery or aerial
+            photography—many places on Earth reveal stunning and intricate
+            patterns. Natural and man-made landscapes alike can appear
+            exceptionally beautiful from this perspective.
+          </p>
+          <p style="font-weight: 450">Top-Down Treasures</p>
+          <ul class="list">
+            <li class="list__item--dot">
+              Lakes, winding creeks, expansive beaches, and patchwork farmlands
+              all create visually striking scenes.
+            </li>
+            <li class="list__item--dot">
+              Geological phenomena such as mountain peaks, active volcanoes, and
+              river deltas are also captivating from the sky.
+            </li>
+            <li class="list__item--dot">
+              In addition, ecosystems like mangroves and estuaries, where rivers
+              meet the sea, showcase the dynamic interaction between land and
+              water.
+            </li>
+          </ul>
+        </div>
+        <h4>The Poster</h4>
+        <p>
+          This poster captures the striking underwater topography of Gwadar, a
+          coastal city in southwestern Pakistan known for its deep-sea port and
+          strategic maritime significance.
+        </p>
+        <p>
+          The unique depth contours and underwater features revealed through
+          this bathymetric data served as the foundation for the composition.
+        </p>
+        <div class="project--page__img-left">
+          <picture onclick="openImage(event, 'images/projects/3/gwadar.webp')">
+            <source type="image/webp" srcset="images/projects/3/gwadar.webp" />
+            <img
+              src="images/projects/3/gwadar.png"
+              alt=""
+              class="project__image"
+            />
+          </picture>
+        </div>
+        <h4>Tools & Data</h4>
+        <p>
+          To bring the data to life visually, I used
+          <a class="link" href="https://inkscape.org/"> Inkscape</a>, an
+          open-source vector graphics editor. The data used for this
+          visualization was sourced from the
+          <a class="link" href="https://www.ncei.noaa.gov/maps/bathymetry/"
+            >Bathymetric Data Viewer</a
+          >
+          by the
+          <a class="link" href="https://www.noaa.gov/">
+            National Oceanic and Atmospheric Administration (NOAA)</a
+          >, which provides publicly available and scientifically accurate
+          bathymetry data.
+        </p>
+        <p>
+          The design process involved careful layering, color grading, and
+          stylization to emphasize the depth variations and transitions between
+          land and sea.
+        </p>
+        <h4>Inspiration</h4>
+        <p>
+          A special shoutout goes to the creator of a tutorial
+          <a class="link" href="https://www.youtube.com/watch?v=v7M2XfzFlEU"
+            >video</a
+          >
+          that inspired aspects of the visual treatment and layout — their
+          approach helped shape the artistic direction of the final piece.
+        </p>
+        <p>
+          This project not only celebrates the hidden beauty of Earth's
+          underwater landscapes but also demonstrates how scientific data can be
+          transformed into compelling visual art.
+        </p>
+        <h4>Another Version</h4>
+        <p>
+          I created two versions of the bathymetry poster. In the first version,
+          I used Inkscape’s for automatic contour extraction to generate the
+          depth lines directly from the raster image.
+        </p>
+        <p>
+          In the second version, I manually drew the contours for greater
+          control and clarity. I also removed one of the the outer borders and
+          varied the outer shadow based on depth to enhance the perception of
+          underwater relief and create a more dynamic, three-dimensional effect.
+        </p>
+
+        <picture
+          class="project--page__main-image-container"
+          onclick="openImage(event, 'images/projects/3/gwadar--New.webp')"
+        >
+          <source
+            type="image/webp"
+            srcset="images/projects/3/gwadar--New.webp"
+          />
+          <img
+            src="images/projects/3/gwadar--New.png"
+            alt=""
+            class="project__image"
+          />
+        </picture>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="footer footer--dark">
+      <section class="collapsible collapsible--expanded">
+        <header class="collapsible__header">
+          <p class="collapsible__heading">CONTENTS</p>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li><a href="/">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#cv">Resume</a></li>
+            <li><a href="index.html#contact">Message</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="collapsible">
+        <header class="collapsible__header">
+          <p class="collapsible__heading">RESUME</p>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li>
+              <a id="foo__education" href="index.html#education">Education</a>
+            </li>
+            <li>
+              <a id="foo__experience" href="index.html#experience"
+                >Experience</a
+              >
+            </li>
+            <li><a id="foo__skills" href="index.html#skills">Skills</a></li>
+            <li><a id="foo__awards" href="index.html#awards">Honors</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="collapsible">
+        <header class="collapsible__header">
+          <p class="collapsible__heading">CONTACT</p>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li>
+              <a
+                href="https://de.linkedin.com/in/hassam-ali-kiani"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Ali-Hassam"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer__logo">
+        <a href="/">
+          <img src="images/logo and icon/Icon--hollow.svg" alt="Icon"
+        /></a>
+        <p class="footer__copyright-notice">Copyright &copy; 2025 Hassam Ali</p>
+      </section>
+    </div>
+
+    <!-- Content notice -->
+    <p class="content-notice">
+      All the content on this website and associated pages is the exclusive
+      property of Hassam Ali and is protected by international copyright laws.
+      Any reproduction, redistribution, scraping, training of AI models
+      (including but not limited to machine learning and large language models),
+      or any other form of automated or manual data extraction is strictly
+      prohibited without prior consent. Unauthorized use may result in legal
+      action.
+    </p>
+    <script src="js/main.js"></script>
+  </body>
+</html>

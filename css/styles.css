@@ -1180,10 +1180,12 @@ ul.list li::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem 2rem;
+  margin: 2rem;
 }
-.project--page__img-small > picture {
+.project--page__img-small img {
   display: inline-block;
+  max-height: 450px;
+  padding: 0 2rem;
 }
 @media screen and (min-width: 768px) {
   .project--page__main-image-container {

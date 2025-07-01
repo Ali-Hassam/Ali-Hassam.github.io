@@ -131,7 +131,12 @@ h4 {
 p {
   margin-top: 0;
 }
-
+.s-bold {
+  font-weight: 450;
+}
+.bold {
+  font-weight: 550;
+}
 ::selection {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
@@ -1100,17 +1105,16 @@ ul.list li::before {
 /* Single Project Info */
 .project--page {
   display: flex;
-  background-color: white;
+  background-color: var(--color-page);
   flex-direction: column;
   max-width: 1050px;
   gap: 5rem;
   margin: 5rem auto 0 auto;
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 350;
   align-items: flex-start;
   padding: 4rem;
-  font-size: clamp(1.1rem, 1vw + 1rem, 1.8rem);
-  /* line-height: 1.5; */
+  font-size: clamp(1.1rem, 1vw + 1rem, 1.6rem);
 }
 .project--page__header {
   display: flex;
@@ -1149,18 +1153,22 @@ ul.list li::before {
   margin-bottom: 2rem;
 }
 .project--page__summary {
-  font-size: clamp(1.1rem, 1vw + 1rem, 1.6rem);
+  font-size: clamp(1.1rem, 1vw + 1rem, 1.5rem);
+  font-weight: 320;
+  line-height: 1.7;
   background-color: #f5f4ee;
   border: 1px solid var(--color-primary-light);
   padding: 4rem;
   text-align: left;
   margin-bottom: 5rem;
 }
-.project--page__summary > p {
+.project--page__summary p {
   text-align: left;
   margin-bottom: 1.6rem;
 }
-
+.project--page__summary h4 {
+  margin-top: 0;
+}
 .project--page ul.list li {
   position: relative;
   padding-left: 1.5rem;

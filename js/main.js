@@ -20,6 +20,15 @@ menuToggle.addEventListener("click", () => {
   menuIcon.classList.toggle("fa-times"); // or use "fa-xmark" if you're on FA 6. I am using v5
 });
 
+//Copyright
+const copyrightOwner = "Hassam Ali";
+const currentYear = new Date().getFullYear();
+
+const el = document.getElementById("copyright-text");
+if (el) {
+  el.textContent = `Copyright © ${currentYear} ${copyrightOwner}`;
+}
+
 //Typed Js for hero component
 var typed = new Typed("#typed", {
   stringsElement: "#typed-strings",
@@ -90,6 +99,15 @@ form.addEventListener("submit", function (e) {
       }, 5000);
     });
 });
+
+// //Copyright
+// const copyrightOwner = "Hassam Ali";
+// const currentYear = new Date().getFullYear();
+
+// const el = document.getElementById("copyright-text");
+// if (el) {
+//   el.textContent = `Copyright © ${currentYear} ${copyrightOwner}`;
+// }
 
 // Footer links
 // Select all anchors with IDs that start with "foo__"
@@ -227,14 +245,14 @@ function openImage(event, src) {
   document.body.appendChild(overlay);
 }
 
-//Copyright
-const copyrightOwner = "Hassam Ali";
-const currentYear = new Date().getFullYear();
+// //Copyright
+// const copyrightOwner = "Hassam Ali";
+// const currentYear = new Date().getFullYear();
 
-const el = document.getElementById("copyright-text");
-if (el) {
-  el.textContent = `Copyright © ${currentYear} ${copyrightOwner}`;
-}
+// const el = document.getElementById("copyright-text");
+// if (el) {
+//   el.textContent = `Copyright © ${currentYear} ${copyrightOwner}`;
+// }
 
 // back-to-top
 const backToTopBtn = document.querySelector("#back-to-top");

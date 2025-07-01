@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Hassam Ali - GIS Engineer | GIS Developer | Cartographer | Web GIS
+      Enthusiast
+    </title>
+
+    <!-- Fonts link for Google font service -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- prettier-ignore -->
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" />
+
+    <!-- fontawesome icons -->
+    <!-- prettier-ignore -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+    <!-- leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- leaflet -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- Favicon and touch icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="images/favicon/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="images/favicon/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="images/favicon/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="images/favicon/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="images/favicon/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="images/favicon/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="images/favicon/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="images/favicon/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="images/favicon/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="images/favicon/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+
+    <link rel="manifest" href="images/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="images/favicon/ms-icon-144x144.png"
+    />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar component -->
+      <div class="nav collapsible">
+        <!-- prettier-ignore -->
+        <a aria-label="Hassam Ali" href="/"><img src="images/logo and icon/logo__white_path.svg" alt="" class="main-logo"></a>
+        <div class="collapsible__header" id="menuToggler">
+          <i class="fas fa-bars" id="menuIcon"></i>
+        </div>
+        <ul class="list collapsible__content">
+          <li class="nav__item"><a class="a--underline" href="/">Home</a></li>
+          <li class="nav__item">
+            <a class="a--underline" href="index.html#portfolio">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a class="a--underline" href="index.html#cv">Curriculum Vitae</a>
+          </li>
+          <li class="nav__item">
+            <a class="a--underline" href="index.html#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="project--page">
+      <div class="project--page__header">
+        <h2 class="project__title">Kamran on Bike</h2>
+        <div class="project_techs">
+          <span class="badge badge--arcgispro">ArcGIS Pro</span>
+          <span class="badge badge--inkscape">Inkscape</span>
+        </div>
+      </div>
+      <picture
+        class="project--page__main-image-container"
+        onclick="openImage(event, 'images/projects/2/kamranonbike-2x.webp')"
+      >
+        <source
+          type="image/webp"
+          srcset="
+            images/projects/2/kamranonbike-2x.webp 1x,
+            images/projects/2/kamranonbike-2x.webp 2x,
+            images/projects/2/kamranonbike-3x.webp 3x
+          "
+        />
+        <img
+          src="images/projects/2/kamranonbike-2x.png"
+          alt="kamran on bike project image"
+          class="project__image"
+        />
+      </picture>
+      <div class="project--page__body">
+        <h4>Mapping an Inspirational Journey</h4>
+        <p>
+          Maps tell stories—and this map tells an inspiring story of chasing
+          dreams. When I got the chance to map a travel journey, no story
+          resonated more than
+          <span class="s-bold">
+            Kamran’s extraordinary adventure of cycling around the world</span
+          >. I reached out to
+          <a class="bold a--underline" href="#kamran"> Kamran on Bike</a>, and
+          he generously allowed me to use his journey data for this project.
+        </p>
+
+        <div class="project--page__summary">
+          <h4>Data and Tools</h4>
+          <p>Data is the cornerstone of any map. For this project:</p>
+          <ul class="list">
+            <li class="list__item--dot">
+              <span class="s-bold"> Political boundaries</span> were sourced
+              from the
+              <a
+                class="bold a--underline"
+                href="https://datacatalog.worldbank.org/search/dataset/0038272"
+              >
+                World Bank</a
+              >.
+            </li>
+            <li class="list__item--dot">
+              <span class="s-bold"> Water bodies </span> were taken from
+              <a
+                class="bold a--underline"
+                href="https://www.naturalearthdata.com/downloads/10m-physical-vectors/10m-lakes/"
+                >Natural Earth Data</a
+              >.
+            </li>
+            <li class="list__item--dot">
+              <span class="s-bold"> Route</span> data came directly from
+              <a
+                class="bold a--underline"
+                href="https://kamranonbike.com/route-ar-ak/"
+                >Kamran’s GPS device</a
+              >
+              used during his journey.
+            </li>
+          </ul>
+          The map was initially developed using
+          <span class="s-bold">ArcGIS Pro</span>, while final design refinements
+          were completed in <span class="s-bold">Inkscape</span>, a free and
+          open-source vector graphics editor.
+        </div>
+
+        <h4>Design Challenges and Projection Selection</h4>
+        <p>
+          Creating a map that spans two continents poses both technical and
+          design challenges: The projection needed to preserve distance—critical
+          in representing a journey like this. I chose a
+          <span class="s-bold"> customized projection from </span>
+          <a class="bold a--underline" href="https://projectionwizard.org/">
+            Projection Wizard</a
+          >
+          by
+          <a
+            class="bold a--underline"
+            href="https://bojansavric.projectionwizard.org/"
+          >
+            Bojan Šavrič</a
+          >, which provided the best balance for visual and spatial accuracy.
+        </p>
+        <p>
+          High-resolution satellite imagery was initially considered for the
+          basemap. However, due to data size and processing limitations, I had
+          to abandon this approach.
+        </p>
+
+        <h4>Basemap and Elevation Representation</h4>
+        <p>
+          Instead of using a Digital Elevation Model (DEM)–derived hillshade
+          (which is resource-intensive), I employed a creative workaround: I
+          used a <span class="s-bold"> hand-drawn hillshade</span> by
+          <a
+            class="bold a--underline"
+            href="https://www.shadedreliefarchive.com/Ellen_Kuzdro.html  "
+          >
+            Ellen Kuzdro</a
+          >, which resembles a pencil-drawn landscape. This hillshade was
+          geographically referenced and enhanced in GIS, resulting in an
+          efficient, aesthetically pleasing backdrop.
+        </p>
+        <div class="project--page__img-right">
+          <picture onclick="openImage(event, 'images/projects/2/kob1.webp')">
+            <source type="image/webp" srcset="images/projects/2/kob1.webp" />
+            <img
+              src="images/projects/2/kob1.png"
+              alt=""
+              class="project__image"
+            />
+          </picture>
+        </div>
+        <h4>Route Simplification and Generalization</h4>
+        <p>
+          Kamran’s GPS track was the heart of the map. However, due to the
+          <span class="s-bold">small scale</span> of the map and the
+          <span class="s-bold">complexity of the actual path</span>, I had to
+          simplify the route: Several generalization techniques were tested. The
+          final path was chosen to maintain both visual clarity and route
+          fidelity while fitting the overall map design.
+        </p>
+        <h4>Inset Maps and Visual Effects</h4>
+        <p>
+          To show journey segments where Kamran
+          <span class="s-bold">did not travel by bicycle</span> (such as ferry
+          rides or hitchhiking), I added inset maps:
+          <span class="s-bold">Inset maps</span>
+          were visually differentiated using a mirror effect. Country borders
+          were enhanced with depth effects. Shorelines were highlighted using a
+          subtle shoreline glow for added clarity. These visual elements were
+          inspired by the work of two of my favorite cartographers:
+          <a class="bold a--underline" href="https://adventuresinmapping.com/">
+            John Nelson
+          </a>
+          and
+          <a
+            class="bold a--underline"
+            href=" https://www.sarahbellmaps.com/about/ "
+          >
+            Sarah Bell</a
+          >.
+        </p>
+        <div class="project--page__img-left">
+          <picture onclick="openImage(event, 'images/projects/2/kob2.webp')">
+            <source type="image/webp" srcset="images/projects/2/kob2.webp" />
+            <img
+              src="images/projects/2/kob2.png"
+              alt=""
+              class="project__image"
+            />
+          </picture>
+        </div>
+        <h4>Finalization and Layout Design</h4>
+        <p>
+          Once the basemap was complete, I transitioned from ArcGIS Pro to
+          Inkscape for layout design: Added
+          <span class="s-bold">titles, charts</span>, and
+          <span class="s-bold">graphs</span> showing various statistics about
+          Kamran’s journey. Experimented with different styles and layouts,
+          finalizing them based on visual feedback. Inserted essential map
+          elements such as the <span class="s-bold">legend, scale bar</span>,
+          and <span class="s-bold">directional indicators</span>.
+        </p>
+        <div class="project--page__img-small">
+          <picture onclick="openImage(event, 'images/projects/2/kob3.webp')">
+            <source type="image/webp" srcset="images/projects/2/kob3.webp" />
+            <img
+              src="images/projects/2/kob3.png"
+              alt=""
+              class="project__image"
+            />
+          </picture>
+        </div>
+        <h4>Final Thoughts</h4>
+        <p>
+          The final product is more than a map—it’s a visual story of
+          determination, human endurance, and global exploration. Despite
+          technical limitations and design compromises, the project reflects the
+          essence of Kamran’s inspiring journey and demonstrates how cartography
+          can be a powerful storytelling medium.
+        </p>
+        <picture
+          class="project--page__main-image-container"
+          onclick="openImage(event, 'images/projects/2/Kamran-On-Bike-by-Hassam-Ali.webp')"
+        >
+          <source
+            type="image/webp"
+            srcset="images/projects/2/Kamran-On-Bike-by-Hassam-Ali.webp"
+          />
+          <img
+            src="images/projects/2/Kamran-On-Bike-by-Hassam-Ali.jpg"
+            alt=""
+            class="project__image"
+          />
+        </picture>
+        <a
+          href="images/projects/2/Kamran-On-Bike-by-Hassam-Ali.jpg"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="link a--underline"
+        >
+          <small>View original file (&asymp; 18 MB)</small></a
+        >
+
+        <small> — Copyright © Hassam Ali</small>
+
+        <h4 id="kamran">Kamran Ali</h4>
+        <p>
+          Kamran Ali, widely known as
+          <a
+            class="bold a--underline"
+            href="https://kamranonbike.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Kamran On Bike</a
+          >, originally from Layyah, Pakistan is an adventure cyclist and
+          photographer who has been traveling the world on his bicycle for over
+          a decade. His cycling journey began in 2011 with an ambitious trip
+          from Germany to Pakistan, covering around 4,500 kilometers across
+          multiple countries.
+        </p>
+        <p>
+          After finishing his education in Germany and working as a computer
+          programmer, he decided to pursue his passion. Since 2015, Kamran has
+          cycled more than 63,000 kilometers through 58 countries across four
+          continents. One of his notable achievements is becoming the first
+          Pakistani to cycle the entire length of the Americas—from the southern
+          tip of Argentina all the way to Alaska—covering roughly 33,000
+          kilometers.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="footer footer--dark">
+      <section class="collapsible collapsible--expanded">
+        <header class="collapsible__header">
+          <p class="collapsible__heading">CONTENTS</p>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li><a href="/">Home</a></li>
+            <li><a href="index.html#portfolio">Portfolio</a></li>
+            <li><a href="index.html#cv">Resume</a></li>
+            <li><a href="index.html#contact">Message</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="collapsible">
+        <header class="collapsible__header">
+          <p class="collapsible__heading">RESUME</p>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li>
+              <a id="foo__education" href="index.html#education">Education</a>
+            </li>
+            <li>
+              <a id="foo__experience" href="index.html#experience"
+                >Experience</a
+              >
+            </li>
+            <li><a id="foo__skills" href="index.html#skills">Skills</a></li>
+            <li><a id="foo__awards" href="index.html#awards">Honors</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="collapsible">
+        <header class="collapsible__header">
+          <p class="collapsible__heading">CONTACT</p>
+          <div class="collapsible__icon collapsible__toggler">
+            <span class="fa-stack fa-2x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fas fa-chevron-down fa-stack-1x fa-inverse"></i>
+            </span>
+          </div>
+        </header>
+        <div class="collapsible__content">
+          <ul class="list">
+            <li>
+              <a
+                href="https://de.linkedin.com/in/hassam-ali-kiani"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com/Ali-Hassam"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+          </ul>
+        </div>
+      </section>
+      <section class="footer__logo">
+        <a href="/">
+          <img src="images/logo and icon/Icon--hollow.svg" alt="Icon" />
+        </a>
+        <p class="footer__copyright-notice">
+          <span id="copyright-text"></span>
+        </p>
+      </section>
+    </div>
+
+    <!-- Content notice -->
+    <p class="content-notice">
+      All the content on this website and associated pages is the exclusive
+      property of Hassam Ali and is protected by international copyright laws.
+      Any reproduction, redistribution, scraping, training of AI models
+      (including but not limited to machine learning and large language models),
+      or any other form of automated or manual data extraction is strictly
+      prohibited without prior consent. Unauthorized use may result in legal
+      action.
+    </p>
+    <script src="js/main.js"></script>
+  </body>
+</html>
